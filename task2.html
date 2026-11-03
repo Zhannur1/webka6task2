@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>The Party in Motion</title>
+
+    <link
+        rel="stylesheet"
+        href="task2.css"
+    >
+
+    <script
+        src="https://code.jquery.com/jquery-3.7.1.min.js"
+        defer
+    ></script>
+
+    <script
+        src="task2.js"
+        defer
+    ></script>
+</head>
+
+
+<body>
+
+    <header class="page-header">
+
+        <p class="eyebrow">
+            ASSIGNMENT 6 · TASK 2
+        </p>
+
+        <h1>The Party in Motion</h1>
+
+        <p>
+            Investigate the party using jQuery selectors,
+            effects and animations.
+        </p>
+
+    </header>
+
+
+    <main class="layout">
+
+        <!-- LEFT SIDE: CASES -->
+
+        <section class="case-panel">
+
+            <div class="case-heading">
+
+                <div>
+                    <h2>Cases</h2>
+
+                    <p>
+                        Choose a case to investigate.
+                    </p>
+                </div>
+
+
+                <div class="case-actions">
+
+                    <button
+                        type="button"
+                        id="clearButton"
+                        class="reset-button"
+                    >
+                        Clear
+                    </button>
+
+                    <button
+                        type="button"
+                        id="resetButton"
+                        class="reset-button"
+                    >
+                        Reset Party
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- Case buttons are created by jQuery -->
+
+            <div
+                id="caseButtons"
+                class="case-grid"
+            ></div>
+
+
+            <!-- Result -->
+
+            <section class="result-panel">
+
+                <h2>Result</h2>
+
+                <p
+                    id="resultText"
+                    aria-live="polite"
+                >
+                    Select a case.
+                </p>
+
+
+                <h3>jQuery chain</h3>
+
+                <code id="chainOutput">
+                    —
+                </code>
+
+            </section>
+
+        </section>
+
+
+        <!-- RIGHT SIDE: HOUSE -->
+
+        <section class="house-panel">
+
+            <div class="house-title">
+
+                <h2>The Party</h2>
+
+                <p>
+                    19:30 – 22:30
+                </p>
+
+            </div>
+
+
+            <!-- Floors, rooms and guests are created by jQuery -->
+
+            <div id="party"></div>
+
+        </section>
+
+    </main>
+
+
+    <!-- LEGEND -->
+
+    <footer class="legend">
+
+        <strong>
+            Legend:
+        </strong>
+
+        <span>
+            📱 Phone
+        </span>
+
+        <span>
+            👓 Glasses
+        </span>
+
+        <span>
+            👜 Bag
+        </span>
+
+        <span>
+            ☕ Cup
+        </span>
+
+        <span>
+            🍰 Cake crumbs
+        </span>
+
+        <span>
+            🎓 AITU student
+        </span>
+
+    </footer>
+
+
+    <!-- GUEST CARD OVERLAY -->
+
+    <div
+        id="guestOverlay"
+        class="guest-overlay"
+    >
+
+        <section
+            id="guestModal"
+            class="guest-modal"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="guestModalTitle"
+        >
+
+            <button
+                type="button"
+                id="closeGuestCard"
+                class="close-card"
+                aria-label="Close guest card"
+            >
+                ×
+            </button>
+
+
+            <!-- Guest information appears here -->
+
+            <div id="guestModalBody"></div>
+
+
+            <!-- Move buttons appear here -->
+
+            <div id="moveButtons"></div>
+
+        </section>
+
+    </div>
+
+</body>
+
+</html>
